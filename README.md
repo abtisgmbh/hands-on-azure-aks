@@ -8,6 +8,9 @@ The hands on labs in in german. You can find alle Challenges in the `challenges`
 1. [Challenge 01 - Kubernetes Cluster erstellen](challenge-01.md)
 2. [Challenge 02 - Kubernetes Cluster über Azure CLI erstellen](challenge-02.md)
 3. [Challenge 03 - Eigene Applikation in AKS bereitstellen](challenge-03.md)
+4. [Challenge 04 - Applikation über Services veröffentlichen](challenge-04.md)
+5. [Challenge 05 - Monitoring und Logging](challenge-05.md)
+6. [Challenge 06 - Horizontal Pod Autoscaling](challenge-06.md)
 
 
 ## Clean up
