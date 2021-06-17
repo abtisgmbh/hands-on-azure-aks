@@ -70,7 +70,7 @@ In diesem Lab behelfen wir uns ein bisschen mit der [Demo von Kubernetes](https:
     ```
 - Sieh dir an was passiert
     ```
-    kubectl get hpa,deployment
+    watch kubectl get hpa,deployment
     ```
 
 ## 4. Last wegnehmen

@@ -76,13 +76,10 @@
 - Das Kubernetes Dashboard ist eine Web UI mit der ein Cluster eingesehen werden kann
 - Das Kubernetes Dashboard bietet einem Benutzer (mit entsprechenden Rechten) jegliche Konfiguration im Cluster vorzunehmen
 - Das Kubernetes Dashboard sollte in Produktivumgebungen nie bereitgestellt sein
-
-- Werbung in eigener Sache: Das Dashboard Script [daniellindemann/k8s-scripts](https://github.com/daniellindemann/k8s-scripts) von GitHub herunterladen
-- Script ausführen
+- Das Dashboard kann mit der Azure CLI bereitgestellt werden werden
     ```
-    ./dashboard.sh start
+    az aks browse -g $RESOURCE_GROUP -n $AKS_CLUSTER_NAME
     ```
-- Zugriff auf URL und Login mit Token
 
 ## 6. Logging in Log Analytics Workspace
 
@@ -109,5 +106,5 @@
 
 ### 6.3 Testen
 
-- Ein bisschen Warten
+- Ein bisschen warten
 - Kubernetes Metriken und Logs ansehen

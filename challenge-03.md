@@ -1,6 +1,6 @@
 # Challenge 03 - Eigene Applikation in AKS bereitstellen
 
-Für diese Challenge benötigt es weitere Resourcen in Azure. Sowie in deiner Umgebung.
+Für diese Challenge benötigt es weitere Resourcen in Azure. Eine Azure Container Registry wird genutzt um Container Images zu hosten.
 
 Hier wird eine kleine .NET Applikation bereitgestellt. Sie liegt auf Github bereit.
 

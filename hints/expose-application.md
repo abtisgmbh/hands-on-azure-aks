@@ -37,7 +37,7 @@
     ```
 - Warte bis der Dienst eine Public IP erhalten hat
     ```
-    kubectl get svc -n lotto --wait
+    kubectl get svc -n lotto --watch
     ```
     oder
     ```
@@ -71,32 +71,34 @@
     ```
 - Check installation
     ```
-    kubectl get pods,services --namespace ingress -w
+    kubectl get pods,services --namespace ingress-nginx
     ```
 
 ### 4.2 Ingress konfigurieren
 
 - Die Applikation würd über den Dienst nip.io verfügbar gemacht
-- Die URL lautet frontend.<ip adresse>.nip.io
+- Die URL lautet frontend.< ip adresse >.nip.io
 
 - Erstelle eine yaml Datei mit dem Namen `ingress-lottoweb.yaml`, konfiguriere den Ingress entsprechend und speichere die Datei ab
     ```
     apiVersion: networking.k8s.io/v1
     kind: Ingress
     metadata:
-    name: ingress-lotto-web
+      name: ingress-lotto-web
+      labels:
+        app: lotto-web
     spec:
-    rules:
-    - host: "frontend.<ip adresse>.nip.io"
-      http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: lotto-web
-            port:
-              number: 80
+      rules:
+      - host: "frontend.20.79.89.195.nip.io"
+        http:
+          paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: lotto-web
+                port:
+                  number: 80
     ```
 - Stelle die yaml Konfiguration in Kubernetes bereit
     ```

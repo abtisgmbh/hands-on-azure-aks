@@ -33,6 +33,10 @@ az aks update \
 
 Über die Azure Container Registry können Images direkt gebaut werden, ohne dass Docker oder eine andere Container Runtime auf dem Client installiert werden muss.
 
+- Lade das Repo [daniellindemann/lotto-microservices](https://github.com/daniellindemann/lotto-microservices/)
+    ```
+    git clone https://github.com/daniellindemann/lotto-microservices.git
+    ```
 - Wechsele in den `src` Ordner des `lotto-microservices` Repos
     ```
     cd lotto-microservices/src
@@ -110,13 +114,17 @@ Damit die Deployments bereitgestellt werden können, muss zuerst der Namespace '
     ```
 - *Web* Pods inspizieren
     ```
-    kubectl describe pod lotto-web-<pod name postfix>
+    kubectl describe pod lotto-web-<pod name postfix> -n lotto
     ```
 - *Web* Pods logs einsehen
     ```
-    kubectl log pod -l app=lotto-web --all-containers=true
+    kubectl logs -n lotto lotto-web-<pod name postfix>
     ```
 - *Web* Pods löschen
     ```
-    kubectl delete pod <pod name>
+    kubectl delete pod <pod name> -n lotto
+    ```
+- Pods prüfen
+    ```
+    kubectl get pods -n lotto
     ```

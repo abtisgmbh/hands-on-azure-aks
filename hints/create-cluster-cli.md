@@ -122,8 +122,7 @@ nginx bereitstellen um die Lauffähigkeit zu prüfen
 ```
 kubectl run nginx --image=nginx
 kubectl get pods
-kubectl exec nginx-pod -- nginx -v
-kubectl port-forward pod/nginx-pod 8080:80
+kubectl exec nginx -- nginx -v
 ```
 
 ## 4. Extra: Yaml Datei Deployment
