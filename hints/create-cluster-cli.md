@@ -82,6 +82,7 @@ az aks create \
     --name $AKS_CLUSTER_NAME \
     --vm-set-type VirtualMachineScaleSets \
     --node-count 3 \
+    --node-vm-size Standard_B2ms \
     --load-balancer-sku standard \
     --location $REGION_NAME \
     --kubernetes-version $VERSION \

@@ -25,7 +25,7 @@
 
 - Test den Dienst mittels Port-Forwarding
     ```
-    kubectl port-forward service/lotto-web 8080:80 -n lotto
+    kubectl port-forward service/lotto-web 8123:80 -n lotto
     ```
 - Greife auf die zurückgegebene URL zu
 
