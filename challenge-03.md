@@ -14,5 +14,5 @@ Aufgabe:
 >       - LottoService: `src/Web/Dockerfile`
 > - Erstelle ein Deployment in Kubernetes, dass jeweils 2 Instanzen des jeweiligen Images im Namespace 'lotto' laufen lässt
 
-[[Hint: Applikation in AKS bereitstellen](hints/create-cluster-cli.md)]
+[[Hint: Applikation in AKS bereitstellen](hints/solution-in-aks.md)]
 
