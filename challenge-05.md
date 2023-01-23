@@ -8,17 +8,18 @@ https://docs.microsoft.com/de-de/azure/azure-monitor/containers/container-insigh
 
 
 Aufgabe:
-> - Schau dir die Logs der *LottoWeb* Pods an
-> - Schau dir die Umgebungsvariablen der *LottoWeb* Pods an
-> - Prüfe die Auslastung der Nodes
-> - Erstelle Resource Quotas für die *LottoWeb* Pods
->   - Requests:
->       - CPU: 100m
->       - Memory: 64Mi
->   - Limits
->       - CPU: 250m
->       - Memory: 256Mi
-> - Stelle das Kubernetes Dashboard bereit und greife darauf zu
-> - Verbinde den Kubernetes Cluster mit einem Log Analytics Workspace
+
+- Schau dir die Logs der *LottoWeb* Pods an
+- Schau dir die Umgebungsvariablen der *LottoWeb* Pods an
+- Prüfe die Auslastung der Nodes
+- Erstelle Resource Quotas für die *LottoWeb* Pods
+  - Requests:
+      - CPU: 100m
+      - Memory: 64Mi
+  - Limits
+      - CPU: 250m
+      - Memory: 256Mi
+- Stelle das Kubernetes Dashboard bereit und greife darauf zu
+- Verbinde den Kubernetes Cluster mit einem Log Analytics Workspace
 
 [[Hint: Monitoring für AKS Lösungen](hints/configure-monitoring.md)]

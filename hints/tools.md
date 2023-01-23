@@ -6,4 +6,4 @@
 
 # Azure Cloud Shell
 
-Alle Aufgaben in diesem Lab können mit der [Azure Cloud Shell](https://portal.azure.com/#cloudshell/) ausgeführt werden
+Alle Aufgaben in diesem Lab können mit der [Azure Cloud Shell](https://portal.azure.com/#cloudshell/) ausgeführt werden.

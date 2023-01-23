@@ -1,13 +1,12 @@
 # Lösung Challenge 06 - Horizontal Pod Autoscaling
 
-*Alle Skripte werden in der Bash ausgeführt. Für Windows PowerShell müssen Variablen anders gesetzt werden*
-
 In diesem Lab behelfen wir uns ein bisschen mit der [Demo von Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
 
 ## 1. Apache Deployment erstellen
 
 - Datei `deployment-apache.yaml` erstellen und den folgenden Inhalt einfügen:
-    ```
+
+    ```yaml
     apiVersion: apps/v1
     kind: Deployment
     metadata:
@@ -45,19 +44,27 @@ In diesem Lab behelfen wir uns ein bisschen mit der [Demo von Kubernetes](https:
       selector:
         run: php-apache
     ```
+
 - Datei in Cluster bereitstellen
-    ```
+
+    Bash/PowerShell:
+    ```bash
     kubectl apply -f deployment-apache.yaml
     ```
 
 ## 2. Horizontal Pod Autoscaler erstellen
 
 - Horizontal Pod Autoscaler erstellen
-    ```
+
+    Bash/PowerShell:
+    ```bash
     kubectl autoscale deployment php-apache --cpu-percent=20 --min=1 --max=10
     ```
+
 - Prüfen
-    ```
+
+    Bash/PowerShell:
+    ```bash
     kubectl get hpa
     ```
 
@@ -65,11 +72,16 @@ In diesem Lab behelfen wir uns ein bisschen mit der [Demo von Kubernetes](https:
 
 - Öffne ein neues Terminal
 - Erstelle einen Pod der das Deployment befeuert
-    ```
+
+    Bash/PowerShell:
+    ```bash
     kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
     ```
+
 - Sieh dir an was passiert
-    ```
+
+    Bash/PowerShell:
+    ```bash
     watch kubectl get hpa,deployment
     ```
 

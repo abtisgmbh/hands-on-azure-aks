@@ -1,4 +1,5 @@
 # hands-on-azure-aks
+
 A collection of hands on labs to get familiar with Azure Kubernetes Services and Kubernetes on Azure
 
 ## Hands on labs
@@ -16,6 +17,7 @@ The hands on labs in in german. You can find alle Challenges in the `challenges`
 ## Clean up
 Don't forget to clean up the resources you created during this lab, otherwise can generate costs you're not aware of.
 
-```
+Bash/PowerShell:
+```bash
 az group delete --name $RESOURCE_GROUP --yes --no-wait
 ```
